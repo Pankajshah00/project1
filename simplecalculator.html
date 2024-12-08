@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+    <style>
+        body,html{
+            background-color: black;
+            color: white;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            
+        }
+        h2{
+
+        }
+        .container{
+            background-color: black;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            
+
+
+        }
+        .box{
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 100px 150px;
+            border-radius: 20px;
+        
+        }
+        button{
+            border-radius: 200px;
+            font-size: 300%;
+            padding: 10px 30px;
+            background-color: #333;
+            
+        }
+        button:hover{
+            background-color: white;
+        }
+        input{
+            padding: 20px 50px;
+            border-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body><div class="container">
+    <div class="box">
+
+        <h2>Simple Calculator</h2>
+        <input type="number" placeholder="Enter number A" id="num1"><br><br>
+        <input type="number" placeholder="Enter number B" id="num2"><br>
+        <h2>Choose Operation</h2>
+        <button onclick="calcsub()">-</button>
+        <button onclick="calcsum()">+</button>
+        <button onclick="calcpro()">x</button>
+        <button onclick="calcdiff()">/</button><br><br><br>
+        <button onclick="res()">Reset</button>
+    
+
+
+    </div>
+</div>
+<script >
+    function calcsum(){
+        const a=parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const sum = a+b;
+        alert("The Sum is: " + sum)
+        
+    }
+    function calcsub(){
+        const a=parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const sub = a-b;
+        alert("The Sum is: " + sub)
+    }
+    function calcpro(){
+        const a=parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const pro = a*b;
+        alert("The Sum is: " + pro)
+    }
+    function calcdiff(){
+        const a=parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const diff = a/b;
+        alert("The Sum is: " + diff)
+    }
+    function res(){
+        document.getElementById("num1").value = null;
+        document.getElementById("num2").value = null;
+
+    }
+</script>
+    
+    
+</body>
+</html>
